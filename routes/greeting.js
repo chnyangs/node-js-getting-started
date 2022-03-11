@@ -6,8 +6,8 @@ router.post('/fording', async function (req, res, next) {
     try{
         //get POST payload
         let jsonData = "";
-        console.log(req)
-        console.log(res)
+        // console.log(req)
+        console.log(req.body.channel)
         // req.on("data", function(chunk) {
         //     jsonData += chunk;
         // });
