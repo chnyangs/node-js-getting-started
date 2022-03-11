@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const router = express.Router();
 
-router.post('/fording', async function (req, res, next) {
+router.post('/forwarding', async function (req, res, next) {
     try{
         //get POST payload
         let jsonData = "";
