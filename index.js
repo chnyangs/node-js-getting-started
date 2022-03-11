@@ -1,7 +1,5 @@
 const express = require('express')
-const router = express.Router();
 const path = require('path')
-const fs = require("fs");
 const PORT = process.env.PORT || 5000
 const apiRouter = require('./routes/greeting');
 
