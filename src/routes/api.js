@@ -7,6 +7,7 @@ router.post('/forwarding', async function (req, res, next) {
     try{
         // append data to file
         const logPath = path.join(__dirname, '../../log/log.txt');
+        console.log("Forwarding Request Body:",req.body)
         let channel = req.body.channel
         channel.feeds.forEach(feed =>{
             feed['field'] = Object.values(feed)[1]
@@ -14,6 +15,8 @@ router.post('/forwarding', async function (req, res, next) {
         fs.appendFileSync(logPath, JSON.stringify(channel) + '\n', function(err) {
             if(err) {
                 res.end('ERROR');//mark request as error
+            }else{
+                res.end("SUCCESS")
             }
         });
         res.end('SUCCESS');//mark request as successful
