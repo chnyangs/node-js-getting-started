@@ -19,19 +19,18 @@
     <table class="table table-striped align-middle">
         <thead>
         <tr>
-            <th class="text-center" scope="col"># Channel Id</th>
+            <th class="text-center" scope="col"># Id</th>
             <th class="text-center" scope="col">Temperature ℃</th>
             <th class="text-center" scope="col">Light(lux)</th>
             <th class="text-center" scope="col">Humidity</th>
             <th class="text-center" scope="col">Voltage</th>
-            <th class="text-center" scope="col">Field5</th>
             <th class="text-center" scope="col">Wifi</th>
         </tr>
         </thead>
         <tbody>
         {{#each records}}
             <tr>
-                <th scope="row">{{this.channel_id}}</th>
+                <th scope="row">{{this.id}}</th>
                 {{#each this.feeds}}
                     <td> {{this.field}}
                     </td>
