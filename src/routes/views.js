@@ -17,7 +17,7 @@ router.get('/display', function(req, res, next) {
     };
     request(options, function(error, response) {
         if (error) throw new Error(error);
-        let recordArr = {}
+        let recordArr = []
         JSON.parse(response.body).forEach(data =>{
             let record = {}
             record = JSON.parse(data);
