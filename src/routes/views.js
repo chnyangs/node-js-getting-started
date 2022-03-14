@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/display', function(req, res, next) {
-    const host = process.env.ENV;
+    const host = req.headers.host;
     const options = {
         'method': 'GET',
         'url': 'http://' + host + '/api/info',
